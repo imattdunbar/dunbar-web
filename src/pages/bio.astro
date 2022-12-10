@@ -1,0 +1,64 @@
+---
+import PortfolioEntry, { PortfolioEntryData } from '../components/PortfolioEntry';
+import Base from '../layouts/base.astro';
+import { getAge } from '../utils/dateUtils';
+
+const entries: PortfolioEntryData[] = [
+  {
+    title: 'University of Kentucky',
+    time: '2012 - 2016',
+    description: `I started my programming journey at the University of Kentucky (Go Cats). My first
+        computer science course I learned Python, then for the rest of my tenure at UK was
+        basically all C++. My senior project was to make a Tic-Tac-Toe game you could play on a Chromecast and the controller was an Android phone. I eventually graduated with a Bachelors Degree in Computer Science, and a minor in Mathematics in May of 2016.`,
+    imageUrl: '/images/UKLogo.webp',
+  },
+  {
+    title: 'Lockheed Martin',
+    time: '2016 - 2017',
+    description: `My first software engineering job out of college. I learned a lot about company processes and working with other departments. My job was to basically assist the Systems Engineering department by writing scripts in a program named IBM Doors used for tracking requirements in an IBM language based on C named DXL and Excel scripts in VBA. Some exposure to Matlab scripting as well.`,
+    imageUrl: '/images/Lockheed.webp',
+  },
+  {
+    title: 'FusionCorp',
+    time: '2017 - 2018',
+    description: `From Lockheed I wanted something at a smaller company where I was going to write modern software. So while I was at Lockheed after hours I started teaching myself how to develop iOS apps professionally since I already knew Swift. This landed me a job here where I was in trial by fire almost immediately, including having to learn Android (at that time it was only Java) on the fly. All in all at that job I probably touched at least 8 apps in iOS and Android, some of which I leave off my resume for simplicity sake.`,
+    imageUrl: '/images/Fusion.webp',
+  },
+  {
+    title: 'Lextech',
+    time: '2018 - 2021',
+    description: `Since I had so much experience shoved into such a short time frame at FusionCorp with all those apps, I applied for a senior engineer position at Lextech because I thought, "why not?". Turns out I interviewed well and got the job. Once again, into the fire learning more enterprise grade app development and deployment strategies. Over the course of working there I touched another 6 apps, all of which were for Fortune 500 companies. Due to the NDA I signed while I was there I can't say which ones!`,
+    imageUrl: '/images/Lextech.webp',
+  },
+  {
+    title: 'Built Technologies',
+    time: '2021 - Present',
+    description: `Currently I work at Built Technologies, I decided to switch it up and get more experience in the web department instead of only developing native apps. I still think native is the way to go, but learning TypeScript and React in-depth in an app environment has really helped me grow as a developer, especially since the knowledge from TypeScript has helped me dive into the back end as well.`,
+    imageUrl: '/images/Built.webp',
+  },
+];
+---
+
+<Base>
+  <main class='flex justify-center items-center min-h-screen max-w-full h-auto p-4'>
+    <div
+      class='flex flex-col items-center w-full min-h-full bg-[#1D1C1D] text-white rounded-2xl p-4'
+    >
+      <h1 class='text-[40px] font-bold'>Bio</h1>
+      <div class='flex items-center justify-center mt-2 text-[#708090]'>
+        <h2 class='text-xl font-bold w-4/5'>
+          {
+            `TL;DR - An old ${getAge()} year old engineer with a CS degree with experience in
+            several different tech stacks because I can't resist getting into different things.`
+          }
+        </h2>
+      </div>
+
+      {
+        entries.map((entry) => {
+          return <PortfolioEntry entry={entry} />;
+        })
+      }
+    </div>
+  </main>
+</Base>

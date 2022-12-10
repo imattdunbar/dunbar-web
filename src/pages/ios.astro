@@ -1,0 +1,67 @@
+---
+import PortfolioEntry from '../components/PortfolioEntry';
+import Base from '../layouts/base.astro';
+
+const pageTitle = 'iOS';
+
+const entries = [
+  {
+    title: 'Grubby',
+    time: '2017',
+    description: `My personal project (no longer listed in the App Store because I didn't feel like paying for the Google Places API / updating it) was an app that would get your current location, and then show you places to eat around you one at a time with a brief description, and linked out to the system Maps app to give directions. Built entirely in Swift.`,
+    imageUrl: '/images/Grubby.webp',
+  },
+  {
+    title: 'Xooker',
+    time: '2017',
+    description: `My first exposure to a professional iOS app, worked on bug fixing and some new features as well as updating the app through some of the early days of Swift when there were several changes taking place in the Apple ecosystem.`,
+    imageUrl: '/images/Xooker.webp',
+  },
+  {
+    title: 'Ali Center Experience',
+    time: '2017',
+    description: `First ARKit app! While at FusionCorp we partnered with the Muhammad Ali Center in Louisville, KY to bring a video to life in an AR.`,
+    imageUrl: '/images/AliCenter.webp',
+  },
+  {
+    title: 'EZTurn',
+    time: '2017',
+    description: `I was the main developer on this iOS app used to manage the "turn" process at university dorms (clean, carpet, paint for new residents) which landed the founder in 30 under 30 and on to a successful business! Definitely one of the most satisfying apps I've worked on.`,
+    imageUrl: '/images/EZTurn.webp',
+  },
+  {
+    title: 'Legends Experience',
+    time: '2017',
+    description: `Another ARKit app, for our local baseball team the Lexington Legends. It was a card collection game which used location to place "cards" that would show up in AR around the Legends stadium. If you collected all the cards you could get discounts in the team store.`,
+    imageUrl: '/images/Legends.webp',
+  },
+  {
+    title: 'Multiple Fortune 500 Company Internal Apps',
+    time: '2018 - 2021',
+    description: `At my tenure at Lextech I worked on multiple Fortune 500 company internal apps for employees that due to an NDA I'm not allowed to discuss publicly. I worked on 6 apps, 3 of them were a part of a suite that were all interconnected, one that had an Watch app integrated, and the most recent in 2021 was built almost entirely in SwiftUI and included a widget.`,
+    imageUrl: '/images/Fortune500.webp',
+  },
+  {
+    title: 'Built Inspect',
+    time: '2022',
+    description: `Implemented several native plugins that interacted with the core Ionic app in Swift. Such as: storage (with CoreData), custom camera, biometric authentication, etc.`,
+    imageUrl: '/images/BuiltInspect.webp',
+  },
+];
+---
+
+<Base>
+  <main class='flex justify-center items-center min-h-screen max-w-full h-auto p-4'>
+    <div
+      class='flex flex-col items-center w-full min-h-full bg-[#1D1C1D] text-white rounded-2xl p-4'
+    >
+      <h1 class='text-[40px] font-bold'>{pageTitle}</h1>
+
+      {
+        entries.map((entry) => {
+          return <PortfolioEntry entry={entry} />;
+        })
+      }
+    </div>
+  </main>
+</Base>

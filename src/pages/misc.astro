@@ -1,0 +1,49 @@
+---
+import PortfolioEntry from '../components/PortfolioEntry';
+import Base from '../layouts/base.astro';
+
+const pageTitle = 'Misc';
+
+const entries = [
+  {
+    title: 'Docker',
+    description: `Lots of run ins and experience with Docker and Docker Compose in every day development. Whether it be spinning up local APIs that the app I'm working on depends on, or spinning up a test database.`,
+    imageUrl: '/images/Docker.webp',
+  },
+  {
+    title: 'AWS',
+    description: `By no means am I an AWS expert, but I do have enough experience to be dangerous with EC2, ECR, Route 53, and ECS. Hoping to learn more in the future, because infrastructure fascinates me.`,
+    imageUrl: '/images/AWS.webp',
+  },
+  {
+    title: 'Jenkins',
+    description: `Setup multiple iOS apps in a CI/CD pipeline with Jenkins.`,
+    imageUrl: '/images/Jenkins.webp',
+  },
+  {
+    title: 'Azure',
+    description: `Setup iOS CI/CD pipeline in Azure.`,
+    imageUrl: '/images/Azure.webp',
+  },
+  {
+    title: 'Bamboo',
+    description: `Setup iOS CI/CD pipeline in Bamboo`,
+    imageUrl: '/images/Bamboo.webp',
+  },
+];
+---
+
+<Base>
+  <main class='flex justify-center items-center min-h-screen max-w-full h-auto p-4'>
+    <div
+      class='flex flex-col items-center w-full min-h-full bg-[#1D1C1D] text-white rounded-2xl p-4'
+    >
+      <h1 class='text-[40px] font-bold'>{pageTitle}</h1>
+      {
+        entries.map((entry) => {
+          return <PortfolioEntry entry={entry} />;
+        })
+      }
+    </div>
+  </main>
+</Base>

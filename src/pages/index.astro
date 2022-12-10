@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/base.astro';
+import Card from '../components/Card';
+import { getYear } from '../utils/dateUtils';
+---
+
+<Base>
+  <main class='flex justify-center items-center min-h-screen max-w-full'>
+    <div class='grid main-grid w-full h-full p-4 gap-4'>
+      <Card
+        title='Matt Dunbar'
+        description='About Me'
+        roundImage
+        url='/bio'
+        imageUrl='/images/avatar.webp'
+      />
+      <Card
+        title='iOS'
+        description='My adventures with Apple'
+        url='/ios'
+        imageUrl='/images/iOS.webp'
+      />
+      <Card
+        title='Android'
+        description='From Java to Kotlin'
+        url='/android'
+        imageUrl='/images/Android.webp'
+      />
+      <Card
+        title='Web'
+        description='Thank god for TypeScript'
+        url='/web'
+        imageUrl='/images/Web.webp'
+      />
+      <Card
+        title='Misc'
+        description={`Other things I've worked with`}
+        url='/misc'
+        imageUrl='/images/Docker.webp'
+      />
+      <Card title='©' description={`${getYear()} by Matt Dunbar`} url='/' />
+    </div>
+  </main>
+</Base>
