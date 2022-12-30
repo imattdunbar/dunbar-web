@@ -3,7 +3,13 @@ import Base from '../layouts/base.astro';
 ---
 
 <Base>
-  <main class='flex justify-center items-center h-screen w-screen bg-black'>
-    <div class='text-white text-6xl font-semibold'>404</div>
-  </main>
+  <div class='h-screen w-full m-auto flex flex-col justify-center items-center'>
+    <img class='w-[70%] rounded-2xl' src='/images/404.webp' alt='' />
+
+    <a class='text-blue text-2xl font-semibold mt-8' href='/'>
+      <button class='bg-blue-600 text-gray-300 font-bold py-2 px-8 rounded-full'>
+        Go Back Home
+      </button>
+    </a>
+  </div>
 </Base>
