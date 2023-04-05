@@ -1,9 +1,4 @@
 {
-  "env": {
-    "browser": true,
-    "node": true,
-    "es2021": true
-  },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -21,7 +16,9 @@
       },
       "rules": {
         "react/no-unknown-property": "off",
-        "react/jsx-key": "off"
+        "react/jsx-key": "off",
+        // Fixes error with import in .astro files
+        "prettier/prettier": "off"
       }
     }
   ],
@@ -30,14 +27,11 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": "latest"
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks", "prettier"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "camelcase": "error",
-    "spaced-comment": "error",
     "quotes": [
       "error",
       "single",
@@ -45,13 +39,11 @@
         "allowTemplateLiterals": true
       }
     ],
+    "react/react-in-jsx-scope": "off",
+    "camelcase": "error",
+    "spaced-comment": "error",
     "no-duplicate-imports": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-function": "off"
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
   }
 }
