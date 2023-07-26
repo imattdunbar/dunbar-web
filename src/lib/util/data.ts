@@ -1,5 +1,5 @@
-import axios from 'axios';
 import dayjs from 'dayjs';
+import portfolio from '$lib/data/portfolio.json';
 
 export type SiteData = {
 	cards: CardInfo[];
@@ -28,13 +28,8 @@ export type PortfolioEntry = {
 	imageAlt: string;
 };
 
-export async function getData(): Promise<SiteData> {
-	if (import.meta.env.DEV) {
-		axios.defaults.baseURL = 'http://localhost:7777';
-	}
-
-	const data = (await axios.get('portfolio.json')).data as SiteData;
-	return data;
+export function getData(): SiteData {
+	return portfolio as SiteData;
 }
 
 export function getAge(): string {
