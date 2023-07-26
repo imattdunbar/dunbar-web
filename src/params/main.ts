@@ -1,6 +1,6 @@
-/** @type {import('@sveltejs/kit').ParamMatcher} */
-export function match(param) {
-	return validRoutes.includes(param);
-}
+import type { ParamMatcher } from '@sveltejs/kit';
 
-const validRoutes = ['bio', 'android', 'ios', 'misc', 'web'];
+export const match = ((param) => {
+	const validRoutes = ['bio', 'android', 'ios', 'misc', 'web'];
+	return validRoutes.includes(param);
+}) satisfies ParamMatcher;

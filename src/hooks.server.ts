@@ -1,7 +1,8 @@
 import { json } from '@sveltejs/kit';
 import portfolio from '$lib/data/portfolio.json';
+import type { Handle } from '@sveltejs/kit';
 
-export async function handle({ event, resolve }) {
+export const handle = (async ({ event, resolve }) => {
 	if (event.url.pathname === '/resume') {
 		return new Response(null, {
 			status: 303,
@@ -14,4 +15,4 @@ export async function handle({ event, resolve }) {
 	}
 
 	return await resolve(event);
-}
+}) satisfies Handle;
