@@ -27,11 +27,5 @@
 		{#each info.entries as entry}
 			<Entry {entry} />
 		{/each}
-
-		<!-- {
-			entries.map((entry) => {
-			  return <PortfolioEntry entry={entry} />;
-			})
-		  } -->
 	</div>
 </div>
