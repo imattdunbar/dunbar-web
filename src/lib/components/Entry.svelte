@@ -14,5 +14,5 @@
 
 		<h3 class="mt-2 pr-4">{entry.description}</h3>
 	</div>
-	<img class="w-1/2 rounded-2xl mb-4 sm:w-1/3 sm:mb-0" src={entry.imageUrl} alt={entry.imageAlt} />
+	<img class="w-9/12 rounded-2xl mb-4 sm:w-1/3 sm:mb-0" src={entry.imageUrl} alt={entry.imageAlt} />
 </div>
