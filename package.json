@@ -33,6 +33,7 @@
 		"vite": "^4.4.2"
 	},
 	"dependencies": {
+		"@vercel/analytics": "^1.0.1",
 		"dayjs": "^1.11.9"
 	}
 }
