@@ -2,11 +2,14 @@
 	import '$lib/styles/global.css';
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
+	import { isAppMode } from '$lib/util/client';
 
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
-<slot />
+<div class="layout" class:py-16={isAppMode()}>
+	<slot />
+</div>
 
 <style>
 	:global(:root),
