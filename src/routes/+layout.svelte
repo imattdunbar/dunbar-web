@@ -3,13 +3,18 @@
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 	import { isAppMode } from '$lib/util/client';
+	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	inject({ mode: dev ? 'development' : 'production' });
+
+	export let data;
 </script>
 
 <div class:py-16={isAppMode()}>
-	<main>
-		<slot />
+	<main class="main">
+		<PageTransition key={data.pathname}>
+			<slot />
+		</PageTransition>
 	</main>
 </div>
 
@@ -26,5 +31,9 @@
 		max-width: 1080px;
 		margin: auto;
 		padding: 0;
+	}
+
+	.main {
+		overflow: hidden;
 	}
 </style>
