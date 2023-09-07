@@ -7,8 +7,10 @@
 	inject({ mode: dev ? 'development' : 'production' });
 </script>
 
-<div class="layout" class:py-16={isAppMode()}>
-	<slot />
+<div class:py-16={isAppMode()}>
+	<main>
+		<slot />
+	</main>
 </div>
 
 <style>
