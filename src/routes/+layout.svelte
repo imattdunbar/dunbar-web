@@ -3,18 +3,26 @@
 	import { dev } from '$app/environment';
 	import { inject } from '@vercel/analytics';
 	import { isAppMode } from '$lib/util/client';
-	import PageTransition from '$lib/components/PageTransition.svelte';
+	import { onNavigate } from '$app/navigation';
+	import type { OnNavigate } from '@sveltejs/kit';
+
+	onNavigate((navigation: OnNavigate) => {
+		const doc = document as any;
+		if (!doc.startViewTransition) return;
+		return new Promise((resolve) => {
+			doc.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 
 	inject({ mode: dev ? 'development' : 'production' });
-
-	export let data;
 </script>
 
 <div class:py-16={isAppMode()}>
 	<main class="main">
-		<PageTransition key={data.pathname}>
-			<slot />
-		</PageTransition>
+		<slot />
 	</main>
 </div>
 

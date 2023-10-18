@@ -18,6 +18,10 @@ module.exports = {
 		es2017: true,
 		node: true
 	},
+	rules: {
+		'no-case-declarations': 'off',
+		'@typescript-eslint/no-explicit-any': 'off'
+	},
 	overrides: [
 		{
 			files: ['*.svelte'],
