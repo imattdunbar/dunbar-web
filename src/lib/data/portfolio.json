@@ -1,0 +1,239 @@
+{
+	"cards": [
+		{
+			"title": "Matt Dunbar",
+			"description": "About Me",
+			"href": "/bio",
+			"imageUrl": "/images/avatar.webp",
+			"imageAlt": "Profile Picture"
+		},
+		{
+			"title": "iOS",
+			"description": "My adventures with Apple",
+			"href": "/ios",
+			"imageUrl": "/images/iOS.webp",
+			"imageAlt": "Apple logo"
+		},
+		{
+			"title": "Android",
+			"description": "From Java to Kotlin",
+			"href": "/android",
+			"imageUrl": "/images/Android.webp",
+			"imageAlt": "Android logo"
+		},
+		{
+			"title": "Web",
+			"description": "Svelte > React",
+			"href": "/web",
+			"imageUrl": "/images/Svelte.webp",
+			"imageAlt": "SvelteKit logo"
+		},
+		{
+			"title": "Misc",
+			"description": "Other things I've worked with",
+			"href": "/misc",
+			"imageUrl": "/images/Docker.webp",
+			"imageAlt": "Docker logo"
+		},
+		{
+			"title": "©",
+			"description": "[YEAR] by Matt Dunbar",
+			"href": "/",
+			"imageUrl": null,
+			"imageAlt": null
+		}
+	],
+	"pages": [
+		{
+			"title": "Bio",
+			"subtitle": "TL;DR - An old [AGE] year old engineer with a CS degree with experience in several different tech stacks because I can't resist getting into different things.",
+			"entries": [
+				{
+					"title": "University of Kentucky",
+					"time": "2012 - 2016",
+					"description": "I started my programming journey at the University of Kentucky (Go Cats). My first computer science course I learned Python, then for the rest of my tenure at UK was basically all C++. My senior project was to make a Tic-Tac-Toe game you could play on a Chromecast and the controller was an Android phone. I eventually graduated with a Bachelors Degree in Computer Science, and a minor in Mathematics in May of 2016.",
+					"imageUrl": "/images/UKLogo.webp",
+					"imageAlt": "University of Kentucky"
+				},
+				{
+					"title": "Lockheed Martin",
+					"time": "2016 - 2017",
+					"description": "My first software engineering job out of college. I learned a lot about company processes and working with other departments. My job was to basically assist the Systems Engineering department by writing scripts in a program named IBM Doors used for tracking requirements in an IBM language based on C named DXL and Excel scripts in VBA. Some exposure to Matlab scripting as well.",
+					"imageUrl": "/images/Lockheed.webp",
+					"imageAlt": "Lockheed Martin"
+				},
+				{
+					"title": "FusionCorp",
+					"time": "2017 - 2018",
+					"description": "From Lockheed I wanted something at a smaller company where I was going to write modern software. So while I was at Lockheed after hours I started teaching myself how to develop iOS apps professionally since I already knew Swift. This landed me a job here where I was in trial by fire almost immediately, including having to learn Android (at that time it was only Java) on the fly. All in all at that job I probably touched at least 8 apps in iOS and Android, some of which I leave off my resume for simplicity sake.",
+					"imageUrl": "/images/Fusion.webp",
+					"imageAlt": "FusionCorp company logo"
+				},
+				{
+					"title": "Lextech",
+					"time": "2018 - 2021",
+					"description": "Since I had so much experience shoved into such a short time frame at FusionCorp with all those apps, I applied for a senior engineer position at Lextech because I thought, \"why not?\". Turns out I interviewed well and got the job. Once again, into the fire learning more enterprise grade app development and deployment strategies. Over the course of working there I touched another 6 apps, all of which were for Fortune 500 companies. Due to the NDA I signed while I was there I can't say which ones!",
+					"imageUrl": "/images/Lextech.webp",
+					"imageAlt": "Lextech company logo"
+				},
+				{
+					"title": "Built Technologies",
+					"time": "2021 - Present",
+					"description": "Currently I work at Built Technologies, I decided to switch it up and get more experience in the web department instead of only developing native apps. I still think native is the way to go, but learning TypeScript and React in-depth in an app environment has really helped me grow as a developer, especially since the knowledge from TypeScript has helped me dive into the back end as well.",
+					"imageUrl": "/images/Built.webp",
+					"imageAlt": "Built Technologies logo"
+				}
+			]
+		},
+		{
+			"title": "Android",
+			"entries": [
+				{
+					"title": "Grubby",
+					"time": "2017",
+					"description": "My personal project (no longer listed in the App Store because I didn't feel like paying for the Google Places API / updating it) was an app that would get your current location, and then show you places to eat around you one at a time with a brief description, and linked out to the system Maps app to give directions. Built entirely in Java.",
+					"imageUrl": "/images/Grubby.webp",
+					"imageAlt": "Grubby logo"
+				},
+				{
+					"title": "Xooker",
+					"time": "2017",
+					"description": "This app was the first app in Android I had ever touched. It has a suite of built in Unity games and has coupons to local businesses for playing the games.",
+					"imageUrl": "/images/Xooker.webp",
+					"imageAlt": "Xooker logo"
+				},
+				{
+					"title": "EZTurn",
+					"time": "2017",
+					"description": "Had a major role in building the skeleton of the Android version of this app before handing it off to another developer for the finish line.",
+					"imageUrl": "/images/EZTurn.webp",
+					"imageAlt": "EZTurn logo"
+				},
+				{
+					"title": "Built Inspect",
+					"time": "2022",
+					"description": "Implemented several native plugins that interacted with the core Ionic app in Kotlin. Such as: storage (with Room DB), custom camera, biometric authentication, etc.",
+					"imageUrl": "/images/BuiltInspect.webp",
+					"imageAlt": "Built Technologies logo"
+				}
+			]
+		},
+		{
+			"title": "iOS",
+			"entries": [
+				{
+					"title": "Grubby",
+					"time": "2017",
+					"description": "My personal project (no longer listed in the App Store because I didn't feel like paying for the Google Places API / updating it) was an app that would get your current location, and then show you places to eat around you one at a time with a brief description, and linked out to the system Maps app to give directions. Built entirely in Swift.",
+					"imageUrl": "/images/Grubby.webp",
+					"imageAlt": "Grubby logo"
+				},
+				{
+					"title": "Xooker",
+					"time": "2017",
+					"description": "My first exposure to a professional iOS app, worked on bug fixing and some new features as well as updating the app through some of the early days of Swift when there were several changes taking place in the Apple ecosystem.",
+					"imageUrl": "/images/Xooker.webp"
+				},
+				{
+					"title": "Ali Center Experience",
+					"time": "2017",
+					"description": "First ARKit app! While at FusionCorp we partnered with the Muhammad Ali Center in Louisville, KY to bring a video to life in an AR.",
+					"imageUrl": "/images/AliCenter.webp",
+					"imageAlt": "Muhammad Ali Center logo"
+				},
+				{
+					"title": "EZTurn",
+					"time": "2017",
+					"description": "I was the main developer on this iOS app used to manage the \"turn\" process at university dorms (clean, carpet, paint for new residents) which landed the founder in 30 under 30 and on to a successful business! Definitely one of the most satisfying apps I've worked on.",
+					"imageUrl": "/images/EZTurn.webp",
+					"imageAlt": "EZTurn logo"
+				},
+				{
+					"title": "Legends Experience",
+					"time": "2017",
+					"description": "Another ARKit app, for our local baseball team the Lexington Legends. It was a card collection game which used location to place \"cards\" that would show up in AR around the Legends stadium. If you collected all the cards you could get discounts in the team store.",
+					"imageUrl": "/images/Legends.webp",
+					"imageAlt": "Lexington Legends logo"
+				},
+				{
+					"title": "Multiple Fortune 500 Company Internal Apps",
+					"time": "2018 - 2021",
+					"description": "At my tenure at Lextech I worked on multiple Fortune 500 company internal apps for employees that due to an NDA I'm not allowed to discuss publicly. I worked on 6 apps, 3 of them were a part of a suite that were all interconnected, one that had an Watch app integrated, and the most recent in 2021 was built almost entirely in SwiftUI and included a widget.",
+					"imageUrl": "/images/Fortune500.webp",
+					"imageAlt": "Fortune 500 logo"
+				},
+				{
+					"title": "Built Inspect",
+					"time": "2022",
+					"description": "Implemented several native plugins that interacted with the core Ionic app in Swift. Such as: storage (with CoreData), custom camera, biometric authentication, etc.",
+					"imageUrl": "/images/BuiltInspect.webp",
+					"imageAlt": "Built Technologies logo"
+				}
+			]
+		},
+		{
+			"title": "Web",
+			"entries": [
+				{
+					"title": "This Site! (x3)",
+					"description": "When I initially built this site I used Vite, React, TypeScript and SCSS. I've always been scared of CSS so all these styles were handcrafted by yours truly (hence the simple card design everywhere). After it was live for about 2 months, I heard about a new framework called Astro that was better for performance with static sites, so I converted over and also used TailwindCSS instead of handwriting the SCSS myself. Then of course here recently, like any web developer I decided to yet again try something new so now the site is written in SvelteKit.",
+					"imageUrl": "/images/icon.webp",
+					"imageAlt": "Site logo"
+				},
+				{
+					"title": "Built Inspect",
+					"description": "My first exposure to a production React app. I was hired at Built for my expertise in mobile development and learned TypeScript and React on the fly which I had barely experienced before then. After a year of working on this app I am now very comfortable with React and TypeScript.",
+					"imageUrl": "/images/BuiltInspect.webp",
+					"imageAlt": "Built Technologies logo"
+				},
+				{
+					"title": "Ionic",
+					"description": "Ionic is great... If your app doesn't require native interaction. I think the concept of cross platform apps is really great, but the actual large scale implementation of it is just not there yet and at the moment native app development is far superior in my opinion.",
+					"imageUrl": "/images/Ionic.webp",
+					"imageAlt": "Ionic logo"
+				},
+				{
+					"title": "NestJS",
+					"description": "I've always loved the thought of doing backend, and I finally got the chance to do it. The main API the Built Inspect app works with is in NestJS/TypeScript. I've had enough exposure to it to elect this as my API framework if I ever need an API for a side project or need to recommend to other back end developers.",
+					"imageUrl": "/images/NestJS.webp",
+					"imageAlt": "NestJS logo"
+				}
+			]
+		},
+		{
+			"title": "Miscellaneous",
+			"entries": [
+				{
+					"title": "Docker",
+					"description": "Lots of run ins and experience with Docker and Docker Compose in every day development. Whether it be spinning up local APIs that the app I'm working on depends on, or spinning up a test database.",
+					"imageUrl": "/images/Docker.webp",
+					"imageAlt": "Docker logo"
+				},
+				{
+					"title": "AWS",
+					"description": "By no means am I an AWS expert, but I do have enough experience to be dangerous with EC2, ECR, Route 53, and ECS. Hoping to learn more in the future, because infrastructure fascinates me.",
+					"imageUrl": "/images/AWS.webp",
+					"imageAlt": "AWS logo"
+				},
+				{
+					"title": "Jenkins",
+					"description": "Setup multiple iOS apps in a CI/CD pipeline with Jenkins.",
+					"imageUrl": "/images/Jenkins.webp",
+					"imageAlt": "Jenkins logo"
+				},
+				{
+					"title": "Azure",
+					"description": "Setup iOS CI/CD pipeline in Azure.",
+					"imageUrl": "/images/Azure.webp",
+					"imageAlt": "Microsoft Azure logo"
+				},
+				{
+					"title": "Bamboo",
+					"description": "Setup iOS CI/CD pipeline in Bamboo",
+					"imageUrl": "/images/Bamboo.webp",
+					"imageAlt": "Atlassian Bamboo logo"
+				}
+			]
+		}
+	]
+}
