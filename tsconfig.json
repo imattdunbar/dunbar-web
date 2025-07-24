@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // Environment setup & latest features
+    "moduleDetection": "force",
+    "allowJs": true,
+
+    // Bundler mode
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+
+    // Best practices
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Some stricter flags (disabled by default)
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noPropertyAccessFromIndexSignature": false,
+
+    // Everything in here in bun defaults and these match
+    // https://tanstack.com/start/latest/docs/framework/react/build-from-scratch
+    "lib": ["ESNext", "DOM"], // added DOM to get browser types
+    "jsx": "react-jsx",
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
+    "target": "ES2022",
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+
+    // Keep this false because it can result in server bundles leaking into client bundles
+    "verbatimModuleSyntax": false,
+
+    // Added
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "tsBuildInfoFile": "./node_modules/tsconfig.tsbuild.info"
+  }
+}
