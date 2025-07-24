@@ -10,7 +10,7 @@ const LoveLinks = () => {
     <Popover.Root open={open} onOpenChange={setOpen}>
       <Popover.Trigger>
         <div className="flex h-full w-full items-center justify-center pb-4 text-white">
-          <div className="flex items-center">
+          <div className="flex items-center rounded-lg px-4 py-2 hover:bg-zinc-800">
             <p>Made with</p>
             <img src="https://tanstack.com/favicon.ico" alt="Tanstack Logo" className="mx-1 size-5" />
 
