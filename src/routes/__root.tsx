@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 import type { ReactNode } from 'react'
-import { Outlet, HeadContent, Scripts, Navigate, createRootRoute } from '@tanstack/react-router'
+import { Outlet, HeadContent, Scripts, Navigate } from '@tanstack/react-router'
 import { createRootRouteWithContext } from '@tanstack/react-router'
 import type { RouterContext } from '@/router'
 import { defaultHead } from '@/util/seo'
@@ -17,7 +17,7 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 })
 
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext()
+  // const { queryClient } = Route.useRouteContext()
 
   return (
     <RootDocument>

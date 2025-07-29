@@ -1,6 +1,7 @@
 import { createRouter as createTanStackRouter, Navigate } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 import { QueryClient } from '@tanstack/react-query'
+import { routerWithQueryClient } from '@tanstack/react-router-with-query'
 
 export const queryClient = new QueryClient()
 
@@ -9,14 +10,17 @@ export type RouterContext = {
 }
 
 export function createRouter() {
-  return createTanStackRouter({
-    routeTree,
-    context: { queryClient },
-    defaultPreload: 'intent',
-    notFoundMode: 'root',
-    defaultErrorComponent: () => Navigate({ to: '/' }),
-    defaultPendingComponent: () => <>Loading...</>
-  })
+  return routerWithQueryClient(
+    createTanStackRouter({
+      routeTree,
+      context: { queryClient },
+      defaultPreload: 'intent',
+      notFoundMode: 'root',
+      defaultErrorComponent: () => Navigate({ to: '/' }),
+      defaultPendingComponent: () => <>Loading...</>
+    }),
+    queryClient
+  )
 }
 
 declare module '@tanstack/react-router' {
