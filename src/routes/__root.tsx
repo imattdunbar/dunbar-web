@@ -17,8 +17,6 @@ export const Route = createRootRouteWithContext<RouterContext>()({
 })
 
 function RootComponent() {
-  // const { queryClient } = Route.useRouteContext()
-
   return (
     <RootDocument>
       <Outlet />
