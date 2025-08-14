@@ -33,12 +33,11 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <body>
         {children}
         <Scripts />
-        {!isDev && (
-          <script
-            defer
-            src="https://umami-production-f51b.up.railway.app/script.js"
-            data-website-id="c3af060d-7553-40b8-843d-0f31a3a7c792"
-          />
+
+        {isDev ? (
+          <script defer src="https://assets.onedollarstats.com/stonks.js" data-debug="mattdunbar.io"></script>
+        ) : (
+          <script defer src="https://assets.onedollarstats.com/stonks.js"></script>
         )}
       </body>
     </html>
