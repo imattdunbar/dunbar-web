@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite'
-import tsConfigPaths from 'vite-tsconfig-paths'
+import viteTsConfigPaths from 'vite-tsconfig-paths'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+
+// Using nitro v3 beta to deploy to Vercel
+// https://v3.nitro.build/docs/migration
+// https://tanstack.com/start/latest/docs/framework/react/hosting#using-nitro-v3-beta
+import { nitro } from 'nitro/vite'
 
 export default defineConfig({
   server: {
@@ -10,10 +15,8 @@ export default defineConfig({
     host: true
   },
   plugins: [
-    tsConfigPaths(),
+    viteTsConfigPaths(),
     tanstackStart({
-      customViteReactPlugin: true,
-      target: 'vercel',
       sitemap: {
         host: 'https://mattdunbar.io'
       },
@@ -30,16 +33,11 @@ export default defineConfig({
       }
     }),
     tailwindcss(),
-    viteReact()
-  ],
-  build: {
-    rollupOptions: {
-      onwarn(warning, warn) {
-        // Ignoring these warnings for now until TanStack Start is 1.0
-        if (['CIRCULAR_DEPENDENCY', 'UNUSED_EXTERNAL_IMPORT', 'SOURCEMAP_BROKEN'].includes(warning.code ?? '---'))
-          return
-        warn(warning)
+    nitro({
+      config: {
+        preset: 'vercel'
       }
-    }
-  }
+    }),
+    viteReact()
+  ]
 })
