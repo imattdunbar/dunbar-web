@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+:root,
+html,
+body {
+  @apply bg-zinc-900;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+*:focus-visible {
+  outline: none !important;
+}

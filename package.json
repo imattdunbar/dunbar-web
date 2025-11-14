@@ -1,0 +1,41 @@
+{
+  "name": "dunbar-web",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.90.9",
+    "@tanstack/react-router": "^1.136.1",
+    "@tanstack/react-router-ssr-query": "^1.136.1",
+    "@tanstack/react-start": "^1.136.1",
+    "radix-ui": "^1.4.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^4.1.17",
+    "vite": "^7.2.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/bun": "latest",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "nitro": "^3.0.1-alpha.1",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.7.1",
+    "typescript": "^5.9.3",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@tailwindcss/oxide",
+    "esbuild"
+  ],
+  "engines": {
+    "node": "22.x"
+  }
+}
