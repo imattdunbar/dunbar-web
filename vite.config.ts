@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import viteTsConfigPaths from 'vite-tsconfig-paths'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -10,8 +9,10 @@ export default defineConfig({
     port: 7777,
     host: true
   },
+  resolve: {
+    tsconfigPaths: true
+  },
   plugins: [
-    viteTsConfigPaths(),
     tanstackStart({
       sitemap: {
         host: 'https://mattdunbar.io'
