@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react'
-import { Outlet, HeadContent, Scripts, Navigate } from '@tanstack/react-router'
+import { Outlet, HeadContent, Scripts } from '@tanstack/react-router'
 import { createRootRouteWithContext } from '@tanstack/react-router'
 import type { RouterContext } from '@/router'
 import { defaultHead } from '@/util/seo'
@@ -9,10 +9,7 @@ const isDev = import.meta.env.DEV
 
 export const Route = createRootRouteWithContext<RouterContext>()({
   head: defaultHead,
-  component: RootComponent,
-  notFoundComponent: () => {
-    return Navigate({ to: '/' })
-  }
+  component: RootComponent
 })
 
 function AppWrapper({ children }: { children: React.ReactNode }) {

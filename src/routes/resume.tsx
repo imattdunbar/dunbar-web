@@ -3,7 +3,7 @@ import { createFileRoute, redirect } from '@tanstack/react-router'
 export const Route = createFileRoute('/resume')({
   beforeLoad: () => {
     throw redirect({
-      to: '/MattDunbar_Resume.pdf' as any,
+      href: '/MattDunbar_Resume.pdf',
       replace: true
     })
   }

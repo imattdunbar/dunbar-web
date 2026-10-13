@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "semi": false,
+  "printWidth": 120,
+  "sortTailwindcss": true,
+  "sortPackageJson": false,
+  // Preserve generated route files.
+  "ignorePatterns": ["**/*.gen.ts"]
+}

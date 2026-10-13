@@ -31,14 +31,16 @@ function getDefaultHead(options: {
             { name: 'twitter:site', content: options.twitterHandle }
           ]
         : []),
-      { name: 'og:type', content: 'website' },
-      { name: 'og:title', content: options.title },
-      { name: 'og:description', content: options.description },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: options.title },
+      { property: 'og:description', content: options.description },
+      { property: 'og:url', content: 'https://mattdunbar.io/' },
       { name: 'twitter:image', content: options.ogImage },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'og:image', content: options.ogImage }
+      { property: 'og:image', content: options.ogImage }
     ],
     links: [
+      { rel: 'canonical', href: 'https://mattdunbar.io/' },
       { rel: 'stylesheet', href: css },
       { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
       { rel: 'icon', href: '/favicon.ico' },
@@ -84,6 +86,6 @@ export function defaultHead() {
   return getDefaultHead({
     title: 'Matt Dunbar',
     description: `Matt Dunbar's Resume Site`,
-    ogImage: '/og-image.png'
+    ogImage: 'https://mattdunbar.io/og-image.png'
   })
 }

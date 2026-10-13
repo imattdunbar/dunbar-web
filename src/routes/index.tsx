@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { FaGithub, FaLinkedin, FaHeart } from 'react-icons/fa'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { IoDocumentTextOutline } from 'react-icons/io5'
 import LoveLinks from '@/ui/components/LoveLinks'
-import { openLinkInNewTab } from '@/util/browser'
+import { isOnMobile } from '@/util/browser'
 
 export const Route = createFileRoute('/')({
   component: RouteComponent
@@ -19,35 +19,44 @@ function RouteComponent() {
         />
 
         <div className="flex gap-2 p-2 text-xs select-none md:text-base">
-          <div
+          <a
+            href="/resume"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex w-fit transform items-center justify-center gap-2 rounded-lg bg-zinc-950 px-2 py-1 font-semibold transition duration-200 hover:scale-105 active:scale-90"
-            onClick={() => {
-              openLinkInNewTab('https://mattdunbar.io/resume')
+            onClick={(event) => {
+              if (isOnMobile()) event.currentTarget.target = '_self'
             }}
           >
             <IoDocumentTextOutline aria-hidden="true" className="size-8" />
             <h2>Resume</h2>
-          </div>
+          </a>
 
-          <div
+          <a
+            href="https://github.com/imattdunbar"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex w-fit transform items-center justify-center gap-2 rounded-lg bg-zinc-950 px-4 py-2 font-semibold transition duration-200 hover:scale-105 active:scale-90"
-            onClick={() => {
-              openLinkInNewTab('https://github.com/imattdunbar')
+            onClick={(event) => {
+              if (isOnMobile()) event.currentTarget.target = '_self'
             }}
           >
             <FaGithub aria-hidden="true" className="size-8" />
             <h2>Github</h2>
-          </div>
+          </a>
 
-          <div
+          <a
+            href="https://linkedin.com/in/imattdunbar"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex w-fit transform items-center justify-center gap-2 rounded-lg bg-zinc-950 px-4 py-2 font-semibold transition duration-200 hover:scale-105 active:scale-90"
-            onClick={() => {
-              openLinkInNewTab('https://linkedin.com/in/imattdunbar')
+            onClick={(event) => {
+              if (isOnMobile()) event.currentTarget.target = '_self'
             }}
           >
             <FaLinkedin aria-hidden="true" className="size-8" />
             <h2>LinkedIn</h2>
-          </div>
+          </a>
         </div>
 
         {/* <div className="m-3 rounded-xl bg-slate-800 p-5 text-center text-lg font-medium text-slate-300">
